@@ -1,16 +1,18 @@
 //import react into the bundle
 import React from "react";
 import ReactDOM from "react-dom";
+import Timer from "./component/Timer";
 
 //include bootstrap npm library into the bundle
 import "bootstrap";
 
 //include your index.scss file into the bundle
 import "../styles/index.scss";
+import "../styles/index2.css";
 
 //import your own components
 //import { Home } from "./component/home.js";
-
+/*
 import { Counter } from "./component/counter.js";
 
 let counter = 0;
@@ -36,7 +38,16 @@ setInterval(function() {
 		/>,
 		document.querySelector("#app")
 	);
-}, 1000);
+}, 1000);*/
 
+function App() {
+	return (
+		<div className="App">
+			<Timer />
+		</div>
+	);
+}
 //render your react application
 //ReactDOM.render(<Home />, document.querySelector("#app"));
+const rootElement = document.getElementById("root");
+ReactDOM.render(<App />, rootElement);
